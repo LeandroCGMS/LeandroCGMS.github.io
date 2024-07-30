@@ -1,0 +1,18 @@
+#twinsImage {
+    width: 500px;
+    height: 400px;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainDiv {
+    position: relative;
+    top: 2em;
+    border: 1px solid red;
+    border-radius: 2em;
+}
