@@ -1,6 +1,8 @@
 #twinsImage {
     width: 500px;
     height: 400px;
+    position: relative;
+    margin: 1em;
 }
 
 .center {
@@ -13,6 +15,15 @@
 .mainDiv {
     position: relative;
     top: 2em;
-    border: 1px solid red;
+    border: 1px solid steelblue;
     border-radius: 2em;
+}
+
+.resultTextArea {
+    width: 100%;
+    margin: 1em;
+}
+
+.mainBtn {
+    /* margin: 2em; */
 }
