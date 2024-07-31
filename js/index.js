@@ -29,7 +29,9 @@ $(window).ready(() => {
 
             }
         } catch (error) {
-            console.error(`Ocorreu um erro -> `, error, `\n\nStack ->\n\n`, error.stack)
+            console.error(`Ocorreu um erro -> `, error, `\n\nStack ⬇️\n\n`, error.stack)
+            $('#divResult').show()
+            $('#errorFetch').text(`Ocorreu um erro ao tentar pegar conteúdo do site/arquivo/mídia informado. Provavelmente é por política de CORS, veja o erro abaixo 👇\n\n`, error)
         }
 
     })

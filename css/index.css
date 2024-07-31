@@ -163,4 +163,9 @@ p {
     border: 1px solid steelblue;
     padding: 1%;
     border-radius: 4px;
+    width: auto;
+}
+
+#errorFetch {
+    margin: 2em;
 }
