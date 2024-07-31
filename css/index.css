@@ -1,8 +1,9 @@
 #twinsImage {
-    width: 500px;
-    height: 400px;
+    width: 90%;
+    height: 80%;
     position: relative;
     margin: 1em;
+    border-radius: 5px;
 }
 
 .center {
@@ -13,10 +14,18 @@
 }
 
 .mainDiv {
-    position: relative;
+    position: absolute;
     top: 2em;
     border: 1px solid steelblue;
     border-radius: 2em;
+    position: relative;
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2px;
 }
 
 .resultTextArea {
@@ -85,4 +94,16 @@
     justify-content: center;
     align-items: center;
     padding: 1em;
+}
+
+p {
+    text-indent: 1em;
+}
+
+#mainH1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
