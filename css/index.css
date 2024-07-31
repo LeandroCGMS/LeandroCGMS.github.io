@@ -113,14 +113,15 @@ p {
 #divResult {
     position: fixed;
     border-radius: 2%;
+    border: 1px solid black;
     width: 98%;
     height: 98%;
     padding: 2%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
-    background-color: bisque;
+    background-color: white;
     z-index: 10000;
 }
 

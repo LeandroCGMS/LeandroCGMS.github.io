@@ -17,13 +17,11 @@ $(window).ready(() => {
         // })
         try {
             result = await fetch(urlToGet)
-            console.log(`result -> `, result, await result.text())
-            const contentType = response.headers.get('content-type')
-            console.log(`contentType -> `, contentType)
+            const contentType = await result.headers.get('content-type')
             if (contentType.includes('application/json') || contentType.includes('text/')) {
                 const text = await result.text()
                 $('#divResult').show()
-                $('#divTextResult').text(await result.text())
+                $('#divTextResult').text(text)
                 console.log(`texto -> ${text}`)
             } else if (contentType.includes('image/')) {
                 return response.blob();
@@ -31,10 +29,8 @@ $(window).ready(() => {
 
             }
         } catch (error) {
-
+            console.error(`Ocorreu um erro -> `, error, `\n\nStack ->\n\n`, error.stack)
         }
-
-        stateButton = !stateButton
 
     })
     $('#btnCloseWelcome, #iconCloser').on('click', () => {
