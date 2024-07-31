@@ -10,17 +10,34 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-        <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="css/index.css">
-        <script src="js/index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+        integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/index.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
     <div class="container center mainDiv">
+        <div id="welcome">
+            <div id="titleBar" class="bg-success">
+                <div id="containerCloser" class="bg-danger">
+                    <span id="iconCloser" class="material-icons">close</span>
+                </div>
+            </div>
+            <p id="welcomeMessage">Bem vindas ao mundo da programação, Ana Carolina e Camila.</p>
+            <div id="bottonWelcome">
+                <button id="btnCloseWelcome" class="btn btn-danger">Fechar</button>
+            </div>
+        </div>
         <img id="twinsImage" src="src/images/muichiro-and-yuichiro-tokito-from-demon-slayer.avif" alt="">
         <h1>Página de Exemplo de Programação para As Gêmeas</h1>
-        <button id='mainBtn' class="btn btn-success mainBtn">Pegar conteúdo do arquivo localizado em "https://raw.githubusercontent.com/LeandroCGMS/LeandroCGMS.github.io/main/Familia.txt" e mostrar.</button>
-        <textarea id="mainTextArea" name="" class="resultTextArea" placeholder="Aqui serão mostrados os nomes do arquivo Familia.txt"></textarea>
+        <textarea id="mainTextArea" name="" class="resultTextArea"
+            placeholder="Cole aqui o endereço de um arquivo online, site ou imagem."></textarea>
+        <button id='mainBtn' class="btn btn-success mainBtn">Pegar e Exibir</button>
+        <p>Digite ou cole, na caixa de texto acima, o endereço de algum arquivo de texto, site ou imagem para mostrar
+            seu conteúdo neste site. Exexmplo para copiar e colar: </p>
+        <p>https://raw.githubusercontent.com/LeandroCGMS/LeandroCGMS.github.io/main/Familia.txt</p>
     </div>
 
 </body>
