@@ -1,7 +1,8 @@
 $(window).ready(() => {
     let stateButton = false
-    $('#mainBtn').on('click', () => {
-        if(!stateButton){
+    $('#mainBtn').on('click', async () => {
+        const urlToGet = $('#mainTextArea').val()
+        if (!stateButton) {
             // fetch("https://raw.githubusercontent.com/LeandroCGMS/LeandroCGMS.github.io/main/Familia.txt")
             // .then(async function (response) {
             //     if(response.ok){
@@ -14,14 +15,29 @@ $(window).ready(() => {
             // }).catch(error => {
             //     console.error(error)
             // })
+            try {
+                result = await fetch(urlToGet)
+                const contentType = response.headers.get('content-type')
+                if (contentType.includes('application/json')) {
+                    return response.json();
+                } else if (contentType.includes('text/')) {
+                    return response.text();
+                } else if (contentType.includes('image/')) {
+                    return response.blob();
+                } else {
+                    
+                }
+            } catch (error) {
+
+            }
         } else {
             alert('Agora, vamos limpar o resultado para tentar novamente.')
             $('#mainTextArea').text("")
         }
         stateButton = !stateButton
-        
+
     })
-    $('#btnCloseWelcome, #iconCloser').on('click', () =>{
+    $('#btnCloseWelcome, #iconCloser').on('click', () => {
         console.log('fechou')
         $('#welcome').hide()
     })
