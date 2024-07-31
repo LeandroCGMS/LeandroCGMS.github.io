@@ -112,7 +112,7 @@ p {
 
 #divResult {
     position: fixed;
-    border-radius: 2%;
+    border-radius: 10px;
     border: 1px solid black;
     width: 98%;
     height: 98%;
