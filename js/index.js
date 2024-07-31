@@ -34,7 +34,9 @@ $(window).ready(() => {
 
     })
     $('#btnCloseWelcome, #iconCloser').on('click', () => {
-        console.log('fechou')
         $('#welcome').hide()
+    })
+    $('#btnCloseDivResult, #iconCloserDivResult').on('click', () => {
+        $('#divResult').hide()
     })
 })
