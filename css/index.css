@@ -111,8 +111,26 @@ p {
 }
 
 #divResult {
-    position: absolute;
+    position: fixed;
+    border-radius: 2%;
     width: 98%;
     height: 98%;
     padding: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: bisque;
+    z-index: 10000;
+}
+
+#divResultTitle {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: end;
+    top: 0;
+    position: relative;
+    width: 100%;
+    height: auto;
 }
