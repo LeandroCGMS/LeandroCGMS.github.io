@@ -16,6 +16,8 @@ $(window).ready(() => {
         //     console.error(error)
         // })
         try {
+            $('#divTextResult').text("")
+            $('#twinsImage').attr('src', "src/images/muichiro-and-yuichiro-tokito-from-demon-slayer.avif")
             result = await fetch(urlToGet)
             const contentType = await result.headers.get('content-type')
             if (contentType.includes('application/json') || contentType.includes('text/')) {
@@ -24,7 +26,10 @@ $(window).ready(() => {
                 $('#divTextResult').text(text)
                 console.log(`texto -> ${text}`)
             } else if (contentType.includes('image/')) {
-                return response.blob();
+                const image = await result.blob()
+                $('#twinsImage').attr('src', image)
+
+                // https://images.unsplash.com/photo-1547721064-da6cfb341d50
             } else {
 
             }
