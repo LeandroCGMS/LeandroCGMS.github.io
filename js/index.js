@@ -24,11 +24,14 @@ $(window).ready(() => {
                 const text = await result.text()
                 $('#divResult').show()
                 $('#divTextResult').text(text)
-                console.log(`texto -> ${text}`)
             } else if (contentType.includes('image/')) {
                 const image = await result.blob()
-                $('#twinsImage').attr('src', image)
-
+                var reader = new FileReader()
+                reader.readAsDataURL(image)
+                reader.onloadend = function () {
+                    var base64data = reader.result
+                    $('#twinsImage').attr('src', base64data)
+                }
                 // https://images.unsplash.com/photo-1547721064-da6cfb341d50
             } else {
 
@@ -36,7 +39,7 @@ $(window).ready(() => {
         } catch (error) {
             console.error(`Ocorreu um erro -> `, error, `\n\nStack ⬇️\n\n`, error.stack)
             $('#divResult').show()
-            $('#errorFetch').text(`Ocorreu um erro ao tentar pegar conteúdo do site/arquivo/mídia informado. Provavelmente é por política de CORS, veja o erro abaixo 👇\n\n`, error)
+            $('#errorFetch').text(`Ocorreu um erro ao tentar pegar conteúdo do site/arquivo/mídia informado. Provavelmente é por política de CORS, veja o erro no concole.`)
         }
 
     })
