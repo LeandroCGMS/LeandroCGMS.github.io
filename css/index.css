@@ -120,7 +120,7 @@ p {
     border-style: solid;
     border-color: black;
     width: 98%;
-    height: 85%;
+    height: auto;
     /* padding: 2%; */
     display: flex;
     flex-direction: column;
@@ -128,6 +128,7 @@ p {
     align-items: center;
     background-color: white;
     z-index: 10000;
+    top: 5em;
 }
 
 #divResultTitle {
@@ -173,4 +174,8 @@ p {
 
 #errorFetch {
     margin: 2em;
+}
+
+#btnCloseDivResult {
+    margin: 0.5em;
 }
