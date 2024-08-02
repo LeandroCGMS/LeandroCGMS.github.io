@@ -61,19 +61,25 @@ $(window).ready(() => {
     $('#divRestartAlt').css({
         'display': 'none',
         'border-radius': '100%',
-        'padding': '0.5em',
+        // 'padding': '0.5em',
         'cursor': 'pointer',
-        'border': '4px solid black'
+        // 'border': '4px solid black',
+        'padding-bottom': '1em',
+        'margin-top': '0',
+        'justify-content': 'center',
+        'align-items': 'center',
+        'font-size': '30pt',
+        'font-weight': 'bold'
     })
     $('#divRestartAlt').hover(function() {
-        $(this).removeClass('bg-success')
+        // $(this).removeClass('bg-success')
         $(this).css({
-            'background-color': 'green',
+            // 'background-color': 'green',
             'zoom': '105%'
         })
     })
     $('#divRestartAlt').on('mouseout', function() {
-        $(this).addClass('bg-success')
+        // $(this).addClass('bg-success')
         $(this).css({
             'zoom': '100%'
         })
