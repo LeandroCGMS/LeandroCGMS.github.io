@@ -27,6 +27,7 @@ $(window).ready(() => {
                 $('#divResult').show()
                 $('#divTextResult').text(text)
             } else if (contentType.includes('image/')) {
+                $('#divRestartAlt').show()
                 $('#spinner').show()
                 const image = await result.blob()
                 var reader = new FileReader()
@@ -53,4 +54,37 @@ $(window).ready(() => {
     $('#btnCloseDivResult, #iconCloserDivResult').on('click', () => {
         $('#divResult').hide()
     })
+    $('#divRestartAlt').on('click', () => {
+        $('#twinsImage').attr('src', "src/images/muichiro-and-yuichiro-tokito-from-demon-slayer.avif")
+        $('#divRestartAlt').hide()
+    })
+    $('#divRestartAlt').css({
+        'display': 'none',
+        'border-radius': '100%',
+        'padding': '0.5em',
+        'cursor': 'pointer',
+        'border': '4px solid black'
+    })
+    $('#divRestartAlt').hover(function() {
+        $(this).removeClass('bg-success')
+        $(this).css({
+            'background-color': 'green',
+            'zoom': '105%'
+        })
+    })
+    $('#divRestartAlt').on('mouseout', function() {
+        $(this).addClass('bg-success')
+        $(this).css({
+            'zoom': '100%'
+        })
+    })
+    /*
+        #divRestartAlt {
+            display: none;
+            border-radius: 100%;
+            padding: 0.5em;
+            cursor: pointer;
+            border: 4px solid black;
+        }
+    */
 })
