@@ -17,20 +17,24 @@ $(window).ready(() => {
         // })
         try {
             $('#divTextResult').text("")
-            $('#twinsImage').attr('src', "src/images/muichiro-and-yuichiro-tokito-from-demon-slayer.avif")
+            // $('#twinsImage').attr('src', "src/images/muichiro-and-yuichiro-tokito-from-demon-slayer.avif")
+            $('#spinner').show()
             result = await fetch(urlToGet)
+            $('#spinner').hide()
             const contentType = await result.headers.get('content-type')
             if (contentType.includes('application/json') || contentType.includes('text/')) {
                 const text = await result.text()
                 $('#divResult').show()
                 $('#divTextResult').text(text)
             } else if (contentType.includes('image/')) {
+                $('#spinner').show()
                 const image = await result.blob()
                 var reader = new FileReader()
                 reader.readAsDataURL(image)
                 reader.onloadend = function () {
                     var base64data = reader.result
                     $('#twinsImage').attr('src', base64data)
+                    $('#spinner').hide()
                 }
                 // https://images.unsplash.com/photo-1547721064-da6cfb341d50
             } else {

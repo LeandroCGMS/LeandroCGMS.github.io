@@ -87,6 +87,7 @@
     text-indent: 1em;
     margin: 1em;
     margin: 2em;
+    font-size: 20pt;
 }
 
 #bottonWelcome {
@@ -183,4 +184,12 @@ p {
 #outroExemplo {
     width: 100%;
     margin-bottom: 1em;
+}
+
+#spinner {
+    display: none;
+    position: fixed;
+    /*256 pixels a imagem tem*/
+    top: calc(50% - 128px);
+    left: calc(50% - 128px);
 }
