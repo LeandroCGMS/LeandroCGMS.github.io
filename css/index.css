@@ -216,3 +216,24 @@ p {
     font-size: 30pt;
     font-weight: bold;
 }
+
+#imgRegraTres, #imgCalculator {
+    width: 10%;
+    height: 10%;
+    font-size: 4em;
+    cursor: pointer;
+}
+
+#divImgRegraTres, #divImgCalculator {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0.1em;
+}
+
+#divIconCalculator {
+    display: flex;
+    flex-direction: row;
+    margin: 0.5em;
+}
