@@ -237,3 +237,16 @@ p {
     flex-direction: row;
     margin: 0.5em;
 }
+
+button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 72px;
+    width: 121px;
+}
+
+.smallZoom *{
+    zoom: 75%;
+}
