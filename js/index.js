@@ -85,6 +85,9 @@ $(window).ready(() => {
         })
     })
     $('#divPrimeiroCampoRegraTres').focus()
+    $('#divPrimeiroCampoRegraTres, #divSegundoCampoRegraTres, #divTerceiroCampoRegraTres').on('keydown keyup input', () => {
+        console.log('evento disparado ')
+    })
     /*
         #divRestartAlt {
             display: none;

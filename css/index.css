@@ -150,9 +150,7 @@ p {
     cursor: pointer;
 }
 
-#divResultTitle {
-
-}
+#divResultTitle {}
 
 #containerIconCloseDivResult {
     display: flex;
@@ -217,14 +215,16 @@ p {
     font-weight: bold;
 }
 
-#imgRegraTres, #imgCalculator {
+#imgRegraTres,
+#imgCalculator {
     width: 10%;
     height: 10%;
     font-size: 4em;
     cursor: pointer;
 }
 
-#divImgRegraTres, #divImgCalculator {
+#divImgRegraTres,
+#divImgCalculator {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -247,7 +247,7 @@ button {
     width: 121px;
 }
 
-.smallZoom *{
+.smallZoom * {
     zoom: 75%;
 }
 
@@ -267,7 +267,7 @@ button {
     background-color: white;
 }
 
-#divRegraTres > img {
+#divRegraTres>img {
     position: relative;
     width: 70%;
 }
@@ -295,9 +295,10 @@ button {
     margin-bottom: 4px;
 }
 
-#divLinhaDeCimaRegraTres, #divLinhaDeBaixoRegraTres {
+#divLinhaDeCimaRegraTres,
+#divLinhaDeBaixoRegraTres {
     height: 50%;
-    width: 100% ;
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -309,10 +310,19 @@ button {
     /* margin-top: 4px; */
 }
 
-#divLinhaDeCimaRegraTres *, #divLinhaDeBaixoRegraTres * {
+#divLinhaDeCimaRegraTres *,
+#divLinhaDeBaixoRegraTres * {
     margin: 4px;
 }
 
-#divPrimeiroCampoRegraTres, #divSegundoCampoRegraTres, #divTerceiroCampoRegraTres, #divQuartoCampoRegraTres {
+#divPrimeiroCampoRegraTres,
+#divSegundoCampoRegraTres,
+#divTerceiroCampoRegraTres,
+#divQuartoCampoRegraTres {
     padding: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 25pt;
 }
