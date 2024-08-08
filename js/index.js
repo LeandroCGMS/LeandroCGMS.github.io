@@ -85,8 +85,9 @@ $(window).ready(() => {
         })
     })
     $('#divPrimeiroCampoRegraTres').focus()
-    $('#divPrimeiroCampoRegraTres, #divSegundoCampoRegraTres, #divTerceiroCampoRegraTres').on('keydown keyup input', () => {
-        console.log('evento disparado ')
+    $('#divPrimeiroCampoRegraTres, #divSegundoCampoRegraTres, #divTerceiroCampoRegraTres').on('keydown keyup input', (element) => {
+        let text = $(element).html()
+        console.log(text)
     })
     /*
         #divRestartAlt {
