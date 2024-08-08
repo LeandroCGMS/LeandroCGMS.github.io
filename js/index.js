@@ -84,6 +84,7 @@ $(window).ready(() => {
             'zoom': '100%'
         })
     })
+    $('#divPrimeiroCampoRegraTres').focus()
     /*
         #divRestartAlt {
             display: none;
