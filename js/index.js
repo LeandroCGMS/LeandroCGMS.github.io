@@ -71,23 +71,23 @@ $(window).ready(() => {
         'font-size': '30pt',
         'font-weight': 'bold'
     })
-    $('#divRestartAlt').hover(function() {
+    $('#divRestartAlt').hover(function () {
         // $(this).removeClass('bg-success')
         $(this).css({
             // 'background-color': 'green',
             'zoom': '105%'
         })
     })
-    $('#divRestartAlt').on('mouseout', function() {
+    $('#divRestartAlt').on('mouseout', function () {
         // $(this).addClass('bg-success')
         $(this).css({
             'zoom': '100%'
         })
     })
     $('#divPrimeiroCampoRegraTres').focus()
-    $('#divPrimeiroCampoRegraTres, #divSegundoCampoRegraTres, #divTerceiroCampoRegraTres').on('keydown keyup input', (element) => {
-        let text = $(element).html()
-        console.log(text)
+    $('#divPrimeiroCampoRegraTres, #divSegundoCampoRegraTres, #divTerceiroCampoRegraTres').on('keyup', (element) => {
+        const target = element.target
+        target.innerText = target.innerText.replace(/\D/gmi, '')
     })
     /*
         #divRestartAlt {
