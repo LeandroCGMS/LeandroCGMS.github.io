@@ -91,6 +91,10 @@ $(window).ready(() => {
             target.value = target.value.replace(/[^\d.]/gmi, '')
         }
     })
+    $('#btnResultRegraTres').on('click', () => {
+        const result = $('#divTerceiroCampoRegraTres').val() * $('#divSegundoCampoRegraTres').val() / $('#divPrimeiroCampoRegraTres').val()
+        $('#divQuartoCampoRegraTres').val(result)
+    })
     /*
         #divRestartAlt {
             display: none;
