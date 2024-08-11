@@ -326,3 +326,13 @@ button {
     text-align: center;
     font-size: 25pt;
 }
+
+#divPrimeiroCampoRegraTres::placeholder,
+#divSegundoCampoRegraTres::placeholder,
+#divTerceiroCampoRegraTres::placeholder {
+    font-size: 10pt;
+}
+
+#divQuartoCampoRegraTres::placeholder {
+    font-size: 50pt;
+}
