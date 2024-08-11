@@ -86,6 +86,9 @@ $(window).ready(() => {
     })
     $('#divPrimeiroCampoRegraTres').focus()
     $('#divPrimeiroCampoRegraTres, #divSegundoCampoRegraTres, #divTerceiroCampoRegraTres').on('keyup', (element) => {
+        if($('#divQuartoCampoRegraTres').val() != ''){
+            $('#divQuartoCampoRegraTres').val('')
+        }
         const target = element.target
         if(target.value.match(/\D/gmi)){
             target.value = target.value.replace(/[^\d.]/gmi, '')
