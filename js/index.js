@@ -1,4 +1,5 @@
 $(window).ready(() => {
+    $('#divRegraTres').hide()
     $('#divResult').hide()
     let stateButton = false
     $('#mainBtn').on('click', async () => {
@@ -97,6 +98,13 @@ $(window).ready(() => {
     $('#btnResultRegraTres').on('click', () => {
         const result = $('#divTerceiroCampoRegraTres').val() * $('#divSegundoCampoRegraTres').val() / $('#divPrimeiroCampoRegraTres').val()
         $('#divQuartoCampoRegraTres').val(result)
+    })
+    $('#btnCallRegraTresSimples').on('click', () => {
+        $('#welcome').hide()
+        $('#divRegraTres').show()
+    })
+    $('#iconCloseRegraTres').on('click', () => {
+        $('#divRegraTres').hide()
     })
     /*
         #divRestartAlt {

@@ -336,3 +336,7 @@ button {
 #divQuartoCampoRegraTres::placeholder {
     font-size: 50pt;
 }
+
+ #iconCloseRegraTres {
+    cursor: pointer;
+ }
