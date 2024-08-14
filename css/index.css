@@ -88,6 +88,7 @@
     margin: 1em;
     margin: 2em;
     font-size: 20pt;
+    color: black;
 }
 
 #bottonWelcome {
@@ -339,4 +340,22 @@ button {
 
  #iconCloseRegraTres {
     cursor: pointer;
+ }
+
+ #titleDivRegraTres {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    border: 1px solid black;
+    padding: 1px;
+ }
+
+ #btnCloseRegraTres {
+    border-radius: 100%;
+    cursor: pointer;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
  }
